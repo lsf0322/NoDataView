@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NoDataView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //添加无网空白页
+    [NoDataView initAddSubView:self.view WithNoDirection:NoNetworkView];
+    
+    //添加无网空白页，有点击刷新的
+    [NoDataView initAddSubView:self.view WithNoDirection:NoNetworkView andBlock:^{
+        NSLog(@"刷新");
+    }];
 }
 
 
