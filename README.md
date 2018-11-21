@@ -23,10 +23,10 @@
 ```
 ## 以下是调用
 ```
-    //添加无网空白页
-    [NoDataView initAddSubView:self.view WithNoDirection:NoNetworkView];
+   //添加无网空白页
+   [NoDataView initAddSubView:self.view WithNoDirection:NoNetworkView];
     
-    //添加无网空白页，有点击刷新的
+   //添加无网空白页，有点击刷新的
    [NoDataView initAddSubView:self.view WithNoDirection:NoNetworkView andBlock:^{
         NSLog(@"刷新");
     }];
